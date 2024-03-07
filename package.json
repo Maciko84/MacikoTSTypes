@@ -1,0 +1,12 @@
+{
+  "name": "@maciko/types",
+  "version": "1.0.0",
+  "description": "Type declarations for maciko.ts.",
+  "types": ".d.ts",
+  "main": "errors.js",
+  "scripts": {
+
+  },
+  "author": "Maciko84",
+  "license": "ISC"
+}
