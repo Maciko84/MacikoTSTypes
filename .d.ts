@@ -67,6 +67,19 @@ export const Maciko: {
          * @param text text of the header.
          */
         H(level: 1 | 2 | 3 | 4 | 5 | 6 | "1" | "2" | "3" | "4" | "5" | "6", text: string): HTMLElement;
+
+        /**
+         * Creates a paragraph.
+         * @param contents contents of paragraph.
+         */
+        P(...contents: string[]): HTMLElement
+
+        /**
+         * Creates an list.
+         * @param elements elements to add to list.
+         */
+        List(mode: "ordered" | "unordered" | "ol" | "ul", ...elements: (string | HTMLElement)[]): HTMLElement
+
         /**
          * Collection of functions for creating media embeds.
          */
