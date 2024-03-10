@@ -81,6 +81,54 @@ export const Maciko: {
         List(mode: "ordered" | "unordered" | "ol" | "ul", ...elements: (string | HTMLElement)[]): HTMLElement
 
         /**
+         * Collection of functions for making forms / interactive elements
+         */
+        form: {
+            /**
+             * Creates a new button
+             * @param isSubmit Is it a submit button?
+             * @param children Children of DOM element. 
+             */
+            Button(isSubmit: boolean, ...text: (string | HTMLElement)[]): HTMLElement;
+
+            /**
+             * Creates a new Form element.
+             * @param post Post Link.
+             * @param children Children of the DOM element.
+             */
+            Form(post: string, ...children: (string | HTMLElement)[]): HTMLElement;
+
+            /**
+             * Creates a new FieldSet element.
+             * @param legend legend (title)
+             * @param children children of element.
+             */
+            FieldSet(legend: string, ...children: (string | HTMLElement)[]): HTMLElement;
+
+            /**
+             * Creates a new Input element.
+             * @param type Type of the input element.
+             * @param name Name of the input element.
+             * @param value Initial value of the input element.
+             */
+            Input(
+                type:
+                    | "text"
+                    | "number"
+                    | "password"
+                    | "checkbox"
+                    | "radio"
+                    | "reset"
+                    | "file"
+                    | "hidden"
+                    | "image"
+                    | "button",
+                name: string,
+                value?: string
+            ): HTMLElement;
+        }
+
+        /**
          * Collection of functions for creating media embeds.
          */
         media: {
